@@ -31,51 +31,31 @@ function Main() {
      }
 
 
-     this.grad = (mark) => {
-      if (mark < 0 || mark > 100) {
-        return "Invalid";
-      } else if (mark < 33) {
-        return 0;
-      } else if (mark >= 33 && mark <= 39) {
-        return 4;
-      } else if (mark >= 40 && mark <= 49) {
-        return 5;
-      } else if (mark >= 50 && mark <= 59) {
-        return 6;
-      } else if (mark >= 60 && mark <= 69) {
-        return 7;
-      } else if (mark >= 70 && mark <= 79) {
-        return 8;
-      } else if (mark >= 80 && mark <= 89) {
-        return 9;
-      } else if (mark >= 90 && mark <= 100) {
-        return 10;
-      }
-    }
-
-
     this.final = (data) => {
        
        data.forEach( (total) => {
              
 
-            console.log(`
+   console.log(`
    Name : ${total.Name}
    Roll : ${total.Roll}
-               
-   Bangla: ${total.Marks.Bangla} & GPA: ${this.gpa(total.Marks.Bangla)[0]} & Points: ${this.gpa(total.Marks.Bangla)[1]}
-
-   English: ${total.Marks.English} & GPA: ${this.gpa(total.Marks.English)[0]} & Points: ${this.gpa(total.Marks.English)[1]}
-
-   Math: ${total.Marks.Math} & GPA: ${this.gpa(total.Marks.Math)[0]} & Points: ${this.gpa(total.Marks.Math)[1]}
-
-   Science: ${total.Marks.Science} & GPA: ${this.gpa(total.Marks.Science)[0]} & Points: ${this.gpa(total.Marks.Science)[1]}
-
-   S Science: ${total.Marks.S_Science} & GPA: ${this.gpa(total.Marks.S_Science)[0]} & Points: ${this.gpa(total.Marks.S_Science)[1]}
-
-   Religion: ${total.Marks.Religion} & GPA: ${this.gpa(total.Marks.Religion)[0]} & Points: ${this.gpa(total.Marks.Religion)[1]}
 
 
+
+   ====================================Result========================================           
+   Bangla: ${total.Marks.Bangla} & Grade: ${this.gpa(total.Marks.Bangla)[0]} & Points: ${this.gpa(total.Marks.Bangla)[1]}
+
+   English: ${total.Marks.English} & Grade: ${this.gpa(total.Marks.English)[0]} & Points: ${this.gpa(total.Marks.English)[1]}
+
+   Math: ${total.Marks.Math} & Grade: ${this.gpa(total.Marks.Math)[0]} & Points: ${this.gpa(total.Marks.Math)[1]}
+
+   Science: ${total.Marks.Science} & Grade: ${this.gpa(total.Marks.Science)[0]} & Points: ${this.gpa(total.Marks.Science)[1]}
+
+   S Science: ${total.Marks.S_Science} & Grade: ${this.gpa(total.Marks.S_Science)[0]} & Points: ${this.gpa(total.Marks.S_Science)[1]}
+
+   Religion: ${total.Marks.Religion} & Grade: ${this.gpa(total.Marks.Religion)[0]} & Points: ${this.gpa(total.Marks.Religion)[1]}
+
+   ====================================Result========================================  
    Total GPA = ${(((this.gpa(total.Marks.Bangla)[1]) + (this.gpa(total.Marks.English)[1]) + (this.gpa(total.Marks.Math)[1]) + (this.gpa(total.Marks.Science)[1]) + (this.gpa(total.Marks.S_Science)[1]) + (this.gpa(total.Marks.Religion)[1])) / 6 ).toFixed(2)}
 
             

@@ -20,4 +20,6 @@
 
    
   let master = new Main();
-  console.log(master.final(JSON.parse(localStorage.getItem('StudentData'))));
+
+  master.final(JSON.parse(localStorage.getItem('StudentData')))
+  
